@@ -12,3 +12,15 @@ services:
       NODE_RED_ENABLE_SAFE_MODE: "false"  # 
       #- MQTT_BROKER=47.104.81.55  # 替换为你的 MQTT 服务器地址
       #- MQTT_PORT=1883                         # 替换为你的 MQTT 端口，如果不同
+      # 其它的环境变量配置
+      AOA_CONFIG_HOST: "192.168.0.66"
+      AOA_CONFIG_PORT: "44444"
+      AOA_CONFIG_TOKEN: ""
+      AOA_CONFIG_AUTH_TYPE: "Bearer 3"
+      AOA_CONFIG_HEADERS: '{"Content-Type": "application/json; charset=utf-8"}'
+      
+      DEEPHUB_CONFIG_HOST: "192.168.0.66"
+      DEEPHUB_CONFIG_PORT: "8081"
+      DEEPHUB_CONFIG_TOKEN: ""
+      DEEPHUB_CONFIG_AUTH_TYPE: "Bearer 3"
+      DEEPHUB_CONFIG_HEADERS: '{"Content-Type": "application/json; charset=utf-8"}'

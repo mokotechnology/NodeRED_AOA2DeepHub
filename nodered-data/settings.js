@@ -2,22 +2,18 @@ module.exports = {
     userDir: '/data',
     functionGlobalContext: {
         aoaConfig: {
-            host: '192.168.0.66',
-            port: '44444',
-            token: '',
-            authType: 'Bearer 3',  // 认证类型
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            }
+            host: process.env.AOA_CONFIG_HOST || 'default-host',
+            port: process.env.AOA_CONFIG_PORT || 'default-port',
+            token: process.env.AOA_CONFIG_TOKEN || '',
+            authType: process.env.AOA_CONFIG_AUTH_TYPE || 'Bearer 3',
+            headers: JSON.parse(process.env.AOA_CONFIG_HEADERS || '{}')
         },
         deepHubConfig: {
-            host: '192.168.0.66',
-            port: '8081',
-            token: '',
-            authType: 'Bearer 3',  // 认证类型
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            }
+            host: process.env.DEEPHUB_CONFIG_HOST || 'default-host',
+            port: process.env.DEEPHUB_CONFIG_PORT || 'default-port',
+            token: process.env.DEEPHUB_CONFIG_TOKEN || '',
+            authType: process.env.DEEPHUB_CONFIG_AUTH_TYPE || 'Bearer 3',
+            headers: JSON.parse(process.env.DEEPHUB_CONFIG_HEADERS || '{}')
         }
     },
     httpNodeRoot: '',
