@@ -7,12 +7,12 @@ services:
     ports:
       - "1880:1880"
     volumes:
-      - ./nodered-data:/data  # 挂载本地目录，以存储 flows.json 和 settings.js
+      - ./nodered-data:/data
     environment:
       NODE_RED_ENABLE_SAFE_MODE: "false"  # 
-      #- MQTT_BROKER=47.104.81.55  # 替换为你的 MQTT 服务器地址
-      #- MQTT_PORT=1883                         # 替换为你的 MQTT 端口，如果不同
-      # 其它的环境变量配置
+      #- MQTT_BROKER=47.104.81.55
+      #- MQTT_PORT=1883
+      
       AOA_CONFIG_HOST: "192.168.0.66"
       AOA_CONFIG_PORT: "44444"
       AOA_CONFIG_TOKEN: ""
@@ -24,3 +24,4 @@ services:
       DEEPHUB_CONFIG_TOKEN: ""
       DEEPHUB_CONFIG_AUTH_TYPE: "Bearer 3"
       DEEPHUB_CONFIG_HEADERS: '{"Content-Type": "application/json; charset=utf-8"}'
+      DEEPHUB_ZONE_SOURCE_ID: "d03ba253-c488-4ed8-8a3e-53b60b105098"
