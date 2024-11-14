@@ -1,19 +1,19 @@
 module.exports = {
     userDir: '/data',
     functionGlobalContext: {
-        beaconListConfig: {
+        aoaConfig: {
             host: '192.168.0.66',
             port: '44444',
-            token: 'asdfadafasdfasdfsdf',
+            token: '',
             authType: 'Bearer 3',  // 认证类型
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
             }
         },
-        providersConfig: {
+        deepHubConfig: {
             host: '192.168.0.66',
             port: '8081',
-            token: 'asdfadafasdfasdfsdf',
+            token: '',
             authType: 'Bearer 3',  // 认证类型
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'

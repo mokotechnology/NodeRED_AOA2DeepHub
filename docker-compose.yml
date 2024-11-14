@@ -1,0 +1,14 @@
+
+services:
+  nodered:
+    image: nodered/node-red
+    restart: unless-stopped
+    container_name: my-Nodered
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered-data:/data  # 挂载本地目录，以存储 flows.json 和 settings.js
+    environment:
+      NODE_RED_ENABLE_SAFE_MODE: "false"  # 
+      #- MQTT_BROKER=47.104.81.55  # 替换为你的 MQTT 服务器地址
+      #- MQTT_PORT=1883                         # 替换为你的 MQTT 端口，如果不同
