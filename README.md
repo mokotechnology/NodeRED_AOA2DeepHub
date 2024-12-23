@@ -9,8 +9,6 @@ You can config the AOA and DEEPHUB server parameters in the docker-compose.yml.
 
 ## Usage
 
-To start the ChirpStack simply run:
-
 ```
 
 $ docker-compose up
